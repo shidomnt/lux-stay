@@ -1,0 +1,141 @@
+:root {
+  --header-height: 80px;
+  --search-height: 47px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.5;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.popout-container {
+  position: relative;
+}
+
+/* .popout-container:hover .popout-box {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+.popout-box {
+  --distance: 15px;
+  position: absolute;
+  top: calc(100% + var(--distance));
+  right: 0;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: scale(0);
+  transform-origin: 100% 0%;
+  opacity: 0;
+  font-weight: normal;
+  transition: all 0.2s linear 0s;
+}
+
+.popout-box.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popout-box::before {
+  display: block;
+  content: '';
+  position: absolute;
+  right: 30px;
+  top: -9px;
+  transform: rotate(45deg);
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.09);
+  background-color: #fff;
+  z-index: -1;
+}
+
+.popout-box::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--distance));
+  left: 0;
+  right: 0;
+  height: var(--distance);
+}
+
+.slide-track {
+  margin-top: 10px;
+  position: relative;
+}
+
+.slide-container {
+  width: calc((var(--width) + var(--marginRight)) * var(--quantity));
+  display: flex;
+  transition: 1s;
+}
+
+.slide {
+  position: relative;
+  margin-right: var(--marginRight);
+}
+
+.slide-container .slide img {
+  width: var(--width);
+  height: var(--height);
+  border-radius: 5px;
+}
+
+.slide-track .btn {
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slide-track .btn.forward {
+  right: -10px;
+}
+
+.slide-track .btn.backward {
+  left: -10px;
+}
+
+.grid.wide {
+  max-width: 1257px;
+  margin: 0 auto;
+}
