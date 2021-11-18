@@ -484,3 +484,58 @@
   height: 43px;
   margin-bottom: 24px;
 }
+
+.footer a {
+  transition: color 0.2s linear 0s;
+}
+
+.footer a:hover {
+  color: #fd4e4e;
+}
+
+.footer .row-space {
+  width: 100%;
+  height: 43px;
+}
+
+.footer .logo {
+  width: 170px;
+  height: 35px;
+}
+
+.footer .box-content .box-header, 
+.footer .box-content section{
+  font-size: 1.4rem;
+}
+
+.footer .box-content .box-header {
+  margin-bottom: 15px;
+}
+
+.footer .box-content section{
+  color: #333;
+  line-height: 2.4;
+}
+
+.footer .contact .box {
+  display: flex;
+  margin: 15px 0;
+}
+.footer .contact .box .box-image {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer .contact .box-content .box-header {
+  margin: 0;
+}
+
+.footer .contact .box-content section {
+  line-height: 1.5;
+}
+
+.footer .transaction .image-container {
+  width: 100px;
+  height: 70px;
+}
