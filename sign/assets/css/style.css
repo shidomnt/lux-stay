@@ -1,0 +1,170 @@
+.header .logo svg {
+  width: 244px;
+  height: 50px;
+}
+
+.header .logo-wrapper {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+}
+
+.container .welcome {
+  padding: 44.5px 0;
+  color: #fff;
+  background: linear-gradient(90deg, #f65e38 0, #f68a39 51%, #f65e38);
+}
+
+.container .welcome .title {
+  font-size: 2.4rem;
+}
+
+.container .welcome .desc {
+  font-size: 1.8rem;
+  line-height: 2.5;
+}
+
+.container .media {
+  margin-top: 48px;
+}
+
+.container .media-title {
+  font-size: 1.8rem;
+  margin: 24px 0 14px;
+}
+
+.container .media-desc {
+  font-size: 1.6rem;
+  color: #555555;
+}
+
+.container .media-image img {
+  width: unset;
+  height: 70px;
+}
+
+.container .form-wrapper {
+  padding: 30px;
+  background-color: #fff;
+  transform: translateY(-111px);
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container .form-header {
+  font-weight: bold;
+}
+
+.form-header .form-title {
+  font-size: 24px;
+  margin: 0 0 32px;
+}
+
+.form-header .form-desc {
+  font-size: 1.6rem;
+}
+
+.form-body > * {
+  margin-top: 32px;
+}
+
+.form-group.invalid {
+  color: #f65e38;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  outline: none;
+  border: 1px solid #efb8b8;
+  padding: 16px;
+  border-radius: 30px;
+  font-size: 1.4rem;
+}
+
+.form-group input::placeholder {
+  color: #555555;
+  opacity: 0.7;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group .icon {
+  font-size: 1.6rem;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+}
+
+.form-group .form-message {
+  padding-top: 5px;
+  font-size: 1.2rem;
+}
+
+.form-body .btn {
+  width: 100%;
+  outline: none;
+  border: 1px solid #f5e0e0;
+  padding: 16px;
+  border-radius: 30px;
+  font-size: 1.6rem;
+  color: #555555;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.09);
+}
+
+.form-body .btn {
+  position: relative;
+}
+
+.form-body .btn .icon {
+  position: absolute;
+  font-size: 1.6rem;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-body .btn .icon.facebook {
+  color: #3a5999;
+}
+
+.form-body button[type='submit'] {
+  background-image: linear-gradient(90deg, #f65e38 0, #f68a39 51%, #f65e38);
+  background-size: 200% auto;
+  box-shadow: 0 4px 12px 0 rgb(246 116 57 / 40%);
+  color: #fff;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.form-body button[type='submit']:hover {
+  background-position: 100%;
+}
+
+.form-body button[type='submit'].disabled {
+  opacity: 0.6;
+}
+
+.form-body .form-links {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.form-body .form-links > :not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.form-body .form-links a {
+  color: #f65e39;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.form-sperate {
+  font-size: 1.6rem;
+  text-align: center;
+}

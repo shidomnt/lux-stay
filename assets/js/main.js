@@ -61,25 +61,27 @@ function popoutAction() {
 function bannerShow() {
   const controlBtns = $$('.control-btn')
   const bannerContainer = $('.banner-container')
-  const bannerWidth = $('.top-banner').clientWidth
+  if (bannerContainer) {
+    const bannerWidth = $('.top-banner').clientWidth
 
-  bannerContainer.style.width = `${bannerWidth * controlBtns.length}` + 'px'
+    bannerContainer.style.width = `${bannerWidth * controlBtns.length}` + 'px'
 
-  controlBtns.forEach((btn, key) => {
-    btn.onclick = function (e) {
-      bannerContainer.style.transform = `translateX(${
-        key * bannerWidth * -1
-      }px)`
-      controlBtns.forEach(btn => btn.classList.remove('active'))
-      e.target.classList.add('active')
-    }
-  })
+    controlBtns.forEach((btn, key) => {
+      btn.onclick = function (e) {
+        bannerContainer.style.transform = `translateX(${
+          key * bannerWidth * -1
+        }px)`
+        controlBtns.forEach(btn => btn.classList.remove('active'))
+        e.target.classList.add('active')
+      }
+    })
 
-  let i = 1
+    let i = 1
 
-  setInterval(function () {
-    controlBtns[i++].click()
+    setInterval(function () {
+      controlBtns[i++].click()
 
-    if (i >= controlBtns.length) i = 0
-  }, 5000)
+      if (i >= controlBtns.length) i = 0
+    }, 5000)
+  }
 }

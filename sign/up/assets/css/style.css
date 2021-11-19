@@ -1,0 +1,23 @@
+label[for="form-tel"] ~ .input-group{
+  display: flex;
+}
+
+label[for="form-tel"] ~ .input-group >:first-child {
+  width: unset;
+  max-width: 40%;
+  margin-right: 10px;
+}
+
+.form-group label {
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-body > * {
+  margin-top: 16px;
+}
+
+
