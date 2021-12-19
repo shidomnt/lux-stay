@@ -3,8 +3,8 @@ const $$ = document.querySelectorAll.bind(document)
 popoutAction()
 bannerShow()
 
-$$('.slide-track .btn').forEach((btn, key) => {
-  btn.onclick = function (e) {
+$$('.slide-track .btn').forEach((btn) => {
+  btn.onclick = function () {
     const slideContainer = btn
       .closest('.slide-track')
       .querySelector('.slide-container')
@@ -24,7 +24,7 @@ $$('.slide-track .btn').forEach((btn, key) => {
       .trim()
     const oldMargin = +slideContainer.style.marginLeft.slice(0, -2)
     if (btn.classList.contains('forward')) {
-      // 765 ? (width + margin) * (Tổng số lượng - số lượng hiển thị trên màn hình)
+      // 765 = (width + margin) * (Tổng số lượng - số lượng hiển thị trên màn hình)
       if (oldMargin > -(width + margin) * (quantity - showQuantity)) {
         const newMargin = oldMargin - width - margin
         slideContainer.style.marginLeft = `${newMargin}` + 'px'
@@ -41,14 +41,14 @@ $$('.slide-track .btn').forEach((btn, key) => {
 document.onclick = function (e) {
   if (!e.target.closest('.popout-container')) {
     if (!e.target.classList.contains('control-btn')) {
-      $$('.popout-box').forEach(box => box.classList.remove('show'))
+      $$('.popout-box').forEach((box) => box.classList.remove('show'))
     }
   }
 }
 
 function popoutAction() {
   const popoutContainers = $$('.popout-container')
-  popoutContainers.forEach(container => {
+  popoutContainers.forEach((container) => {
     container.onclick = function (e) {
       const box = e.target.closest('.popout-container').lastElementChild
       if (box.classList.contains('popout-box')) {
@@ -71,7 +71,7 @@ function bannerShow() {
         bannerContainer.style.transform = `translateX(${
           key * bannerWidth * -1
         }px)`
-        controlBtns.forEach(btn => btn.classList.remove('active'))
+        controlBtns.forEach((btn) => btn.classList.remove('active'))
         e.target.classList.add('active')
       }
     })

@@ -1,0 +1,29 @@
+@media (min-width: 740px) {
+  .desinations .slide-container {
+    --height: 260px;
+    --width: 207px;
+    --marginRight: 8px;
+    --quantity: 8;
+    --showQuantity: 3;
+  }
+}
+
+@media (min-width: 1113px) {
+  .desinations .slide-container {
+    --height: 300px;
+    --width: 239px;
+    --marginRight: 16px;
+    --quantity: 8;
+    --showQuantity: 5;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .desinations .slide-container {
+    --height: 300px;
+    --width: 239px;
+    --marginRight: 16px;
+    --quantity: 8;
+    --showQuantity: 5;
+  }
+}
